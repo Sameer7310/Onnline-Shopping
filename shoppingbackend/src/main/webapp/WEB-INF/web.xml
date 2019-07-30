@@ -10,6 +10,17 @@
 	2) servlet specific <init-param> 3) context specific <context-param> The 
 	value might be either "development" (reloading when templates change) or 
 	"deployment". If no configuration is found, "development" is the default. -->
+	
+	<!-- configure front controller -->
+	<servlet>
+	<servlet-name>dispatcher</servlet-name>
+	<servlet-class>org.springframework.web.servlet.dispatcherServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+	<servlet-name>dispatcher</servlet-name>
+	<url-pattern>/</url-pattern>
+	</servlet-mapping>
 
 <filter>
 	<filter-name>wicket.shoppingbackend</filter-name>
